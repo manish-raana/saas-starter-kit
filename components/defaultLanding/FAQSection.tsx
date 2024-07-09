@@ -6,7 +6,7 @@ import faqs from './data/faq.json';
 const FAQSection = () => {
   const { t } = useTranslation('common');
   return (
-    <section className="py-6">
+    <section className="py-6 h-screen">
       <div className="flex flex-col justify-center space-y-6">
         <h2 className="text-center text-4xl font-bold normal-case">
           {t('frequently-asked')}
@@ -20,7 +20,7 @@ const FAQSection = () => {
             {faqs.map((faq, index) => {
               return (
                 <Card key={index} className="border-none">
-                  <Card.Body className="items-left dark:border-gray-200 border border-gray-300">
+                  <Card.Body className="items-left rounded-lg hover:bg-primary hover:text-white cursor-pointer dark:border-gray-200 border border-gray-300">
                     <Card.Title tag="h2">Q. {faq.question}</Card.Title>
                     <p>A. {faq.answer}</p>
                   </Card.Body>

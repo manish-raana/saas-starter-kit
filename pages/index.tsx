@@ -11,6 +11,7 @@ import PricingSection from '@/components/defaultLanding/PricingSection';
 import useTheme from 'hooks/useTheme';
 import env from '@/lib/env';
 import Head from 'next/head';
+import FooterSection from '@/components/defaultLanding/Footer';
 
 const Home: NextPageWithLayout = () => {
   const { toggleTheme, selectedTheme } = useTheme();
@@ -22,7 +23,7 @@ const Home: NextPageWithLayout = () => {
         <title>{t('homepage-title')}</title>
       </Head>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto snap-y snap-mandatory">
         <div className="navbar bg-base-100 px-0 sm:px-1">
           <div className="flex-1">
             <Link href="/" className="btn btn-ghost text-xl normal-case">
@@ -67,6 +68,8 @@ const Home: NextPageWithLayout = () => {
         <PricingSection />
         <div className="divider"></div>
         <FAQSection />
+        <div className="divider"></div>
+        <FooterSection />
       </div>
     </>
   );

@@ -7,7 +7,7 @@ import plans from './data/pricing.json';
 const PricingSection = () => {
   const { t } = useTranslation('common');
   return (
-    <section className="py-6">
+    <section className="py-6 h-screen">
       <div className="flex flex-col justify-center space-y-6">
         <h2 className="text-center text-4xl font-bold normal-case">
           {t('pricing')}
@@ -22,7 +22,7 @@ const PricingSection = () => {
               return (
                 <Card
                   key={`plan-${index}`}
-                  className="rounded-md dark:border-gray-200 border border-gray-300"
+                  className="rounded-lg group hover:bg-primary hover:text-white dark:border-gray-200 border border-gray-300"
                 >
                   <Card.Body>
                     <Card.Title tag="h2">
@@ -47,10 +47,10 @@ const PricingSection = () => {
                       </ul>
                     </div>
                   </Card.Body>
-                  <Card.Actions className="justify-center m-2">
+                  <Card.Actions className="justify-center px-8 my-5">
                     <Button
                       color="primary"
-                      className="md:w-full w-3/4 rounded-md"
+                      className="md:w-full group-hover:bg-white group-hover:text-primary w-3/4 rounded-md text-white"
                       size="md"
                     >
                       {t('buy-now')}
